@@ -18,6 +18,17 @@ module SystemdMon::Notifiers
           delivery_method :smtp, Hash[opts['smtp'].map { |h, k| [h.to_sym, k] }]
         end
       end
+      if options['imap']
+        opts = options
+        Mail.defaults do
+          retriever_method :imap, Hash[opts['imap'].map { |h, k| [h.to_sym, k] }]
+        end
+      elsif options['pop3']
+        opts = options
+        Mail.defaults do
+          retriever_method :pop3, Hash[opts['pop3'].map { |h, k| [h.to_sym, k] }]
+        end
+      end
 
       validate_options!
     end
