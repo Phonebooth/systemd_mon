@@ -34,9 +34,11 @@ module SystemdMon::Notifiers
     end
 
     def notify_start!(hostname)
+      log "notify_start! called"
     end
 
     def notify_stop!(hostname)
+      log "notify_stop! called"
     end
 
     def notify!(notification)
