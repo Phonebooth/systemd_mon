@@ -33,6 +33,12 @@ module SystemdMon::Notifiers
       validate_options!
     end
 
+    def notify_start!(hostname)
+    end
+
+    def notify_stop!(hostname)
+    end
+
     def notify!(notification)
       unit = notification.unit
       subject = "#{notification.type_text}: #{unit.name} on #{notification.hostname}: #{unit.state_change.status_text}"
