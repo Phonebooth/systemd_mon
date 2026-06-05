@@ -1,0 +1,8 @@
+erlang 28.0.2
+elixir 1.18.4-otp-28
+direnv 2.37.1
+pipenv 2025.0.4
+nodejs 24.4.1
+aws-vault 6.6.2
+python 3.13.7t
+golang 1.25.5
