@@ -68,7 +68,7 @@ module SystemdMon
     end
 
     def load_options(yaml_config_file)
-      unless yaml_config_file && File.exists?(yaml_config_file)
+      unless yaml_config_file && File.exist?(yaml_config_file)
         fatal_error "First argument must be a path to a YAML configuration file"
       end
 
